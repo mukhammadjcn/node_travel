@@ -13,5 +13,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/api/travel", require("./routes/travelRoutes"));
+app.get("/", (req, res) => {
+  res.send("Fuck you izikio - server running");
+});
 
 app.listen(PORT, console.log(`Server running on ${PORT} port`));
